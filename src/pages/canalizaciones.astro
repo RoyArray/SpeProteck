@@ -1,0 +1,143 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const canalizationServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Canalizaciones Eléctricas y para Datos",
+  provider: {
+    "@type": "Organization",
+    name: "Proteck",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "Costa Rica",
+  },
+  description:
+    "Sistemas de canalización especializados: bandejas portacables, tubería EMT y soluciones robustas protectores de infraestructura.",
+  offers: {
+    "@type": "Offer",
+    description: "Instalación de canalizaciones industriales",
+  },
+};
+---
+
+<Layout
+  title="Canalizaciones Eléctricas y para Datos | Proteck"
+  description="Sistemas de canalización especializados para proteger su infraestructura crítica. Bandejas portacables, tubería EMT y soluciones robustas para su empresa."
+  pageSchema={canalizationServiceSchema}
+>
+  <!-- HERO -->
+  <section class="page-hero page-hero--service">
+    <div class="container page-hero__inner">
+      <h1 class="page-hero__title" data-animate="fade-up">Canalizaciones</h1>
+      <p class="page-hero__subtitle" data-animate="fade-up" data-delay="200">
+        El camino seguro para tu infraestructura crítica
+      </p>
+    </div>
+  </section>
+
+  <!-- BLOQUE BLANCO -->
+  <section class="hero-gap" aria-hidden="true"></section>
+
+  <!-- TEXTO -->
+  <section class="page-section">
+    <div class="container" data-animate="fade-up">
+      <div class="text-box">
+        <p>
+          Las <strong
+            >canalizaciones eléctricas y de cableado estructurado</strong
+          > son sistemas especializados de tubos, bandejas portacables y canaletas
+          que constituyen la <strong>columna vertebral</strong> de cualquier instalación
+          eléctrica y de datos moderna. Su función principal es <strong
+            >proteger y organizar</strong
+          >
+          los cables de manera eficiente, creando <strong
+            >rutas seguras y ordenadas</strong
+          > para toda la infraestructura.
+        </p>
+
+        <p>
+          Estos sistemas van <strong>más allá de la simple protección</strong>:
+          previenen daños mecánicos, resguardan contra agentes externos como
+          humedad y polvo, y reducen variaciones que podrían <strong
+            >comprometer el funcionamiento</strong
+          >. Una canalización bien diseñada garantiza la <strong
+            >integridad de las señales</strong
+          >, reduce interferencias electromagnéticas y mantiene la separación
+          adecuada entre cables eléctricos y de datos.
+        </p>
+
+        <p>
+          Además, las canalizaciones facilitan el <strong>mantenimiento</strong
+          >, permiten la identificación rápida de circuitos y simplifican la
+          detección de fallas. Una inversión inteligente en canalizaciones de
+          calidad se traduce en <strong>menos tiempo de inactividad</strong>,
+          reducción de costos y mayor vida útil de la infraestructura,
+          convirtiéndolas en un elemento indispensable en cualquier instalación
+          profesional.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 IMÁGENES (como tu referencia) -->
+  <section class="alarm-products">
+    <div class="container alarm-products__grid" data-animate="stagger">
+      <div class="alarm-products__img">
+        <img
+          src="/images/canalizaciones-01.jpg"
+          alt="Bandejas portacables y canalizaciones industriales"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+
+      <div class="alarm-products__img">
+        <img
+          src="/images/canalizaciones-02.jpg"
+          alt="Canalizaciones metálicas y rutas de cableado"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS (3 columnas) -->
+  <section class="benefits-strip">
+    <div class="container">
+      <div class="benefits-3" data-animate="stagger">
+        <article class="benefit-item">
+          <div class="benefit-item__icon blue">🛡️</div>
+          <h3>Protección Total del Cableado</h3>
+          <p>
+            Sistemas certificados que protegen contra daños mecánicos, humedad,
+            fuego, interferencias electromagnéticas y agentes externos,
+            garantizando la integridad de sus cables por décadas.
+          </p>
+        </article>
+
+        <article class="benefit-item">
+          <div class="benefit-item__icon green">🗺️</div>
+          <h3>Organización y Flexibilidad</h3>
+          <p>
+            Diseño modular que permite expansiones futuras sin obras, acceso
+            rápido para mantenimiento, identificación clara de circuitos y
+            cumplimiento de normativas internacionales.
+          </p>
+        </article>
+
+        <article class="benefit-item">
+          <div class="benefit-item__icon blue">🐷</div>
+          <h3>Ahorro a Largo Plazo</h3>
+          <p>
+            Reducción de tiempos de mantenimiento, prevención de fallas
+            costosas, mayor vida útil del cableado y facilidad para
+            actualizaciones tecnológicas futuras.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+</Layout>

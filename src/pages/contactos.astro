@@ -1,0 +1,323 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "¿Cuál es el horario de atención de Proteck?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Nuestro horario de atención administrativa es de lunes a viernes de 8:00 AM a 6:00 PM, y los sábados de 9:00 AM a 2:00 PM. Contamos con soporte técnico para emergencias disponible 24/7.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Dónde se encuentran las oficinas de Proteck?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Nuestras oficinas centrales están situadas en San José, Costa Rica, específicamente 400 metros al este del Gimnasio Nacional.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cómo puedo solicitar una cotización de seguridad?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Puede solicitar una cotización gratuita completando nuestro formulario de contacto en línea, enviando un correo a info@speproteck.com o llamando directamente al +506 2248-1071.",
+      },
+    },
+  ],
+};
+---
+
+<Layout
+  title="Contáctenos | Solicite su Cotización de Seguridad | Proteck"
+  description="¿Necesita proteger su hogar o empresa? Contáctenos hoy para recibir una asesoría gratuita sobre GPS, CCTV y sistemas de seguridad electrónica en Costa Rica."
+  pageSchema={faqSchema}
+>
+  <!-- HERO -->
+  <section class="contact-hero">
+    <div class="container">
+      <h1 data-animate="fade-up">Contacto</h1>
+      <p data-animate="fade-up" data-delay="200">
+        Estamos aquí para ayudarte. Contáctanos para obtener información sobre
+        nuestros productos y servicios de telemetría y seguridad.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENIDO -->
+  <section class="contact-content">
+    <div class="container contact-grid">
+      <!-- INFO -->
+      <aside class="contact-info" data-animate="fade-right">
+        <h2>Información de Contacto</h2>
+
+        <div class="info-item">
+          <span class="info-ico">📞</span>
+          <div>
+            <div class="info-title">Teléfono:</div>
+            <a class="info-link" href="tel:+50622481071">2248-1071</a>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="info-ico">✉️</span>
+          <div>
+            <div class="info-title">Email:</div>
+            <a class="info-link" href="mailto:info@speproteck.com"
+              >info@speproteck.com</a
+            >
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="info-ico">🧾</span>
+          <div>
+            <div class="info-title">Horarios de Atención:</div>
+            <div class="info-text">Lunes a Viernes: 8:00 AM – 6:00 PM</div>
+            <div class="info-text">Sábados: 9:00 AM – 2:00 PM</div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="info-ico">🛟</span>
+          <div>
+            <div class="info-title">Soporte 24/7:</div>
+            <div class="info-text">Para emergencias y soporte técnico</div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="info-ico">📍</span>
+          <div>
+            <div class="info-title">Dirección:</div>
+            <div class="info-text">400 este del Gimnasio Nacional</div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- FORM -->
+      <section class="contact-form" data-animate="fade-left">
+        <h2>Envíanos un Mensaje</h2>
+
+        <form class="form" id="contact-form">
+          <div class="field">
+            <label for="nombre"
+              >Nombre Completo <span class="req">*</span></label
+            >
+            <input type="text" name="nombre" id="nombre" required />
+          </div>
+
+          <div class="field">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" name="email" id="email" required />
+          </div>
+
+          <div class="field">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" name="telefono" id="telefono" />
+          </div>
+
+          <div class="field">
+            <label for="servicio"
+              >Servicio de Interés <span class="req">*</span></label
+            >
+            <select name="servicio" id="servicio" required>
+              <option value="GPS y Telemetría">GPS y Telemetría</option>
+              <option value="CCTV">CCTV</option>
+              <option value="Alarmas">Alarmas</option>
+              <option value="Control de Acceso">Control de Acceso</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="inmueble"
+              >¿Qué inmueble deseas proteger? <span class="req">*</span></label
+            >
+            <select name="inmueble" id="inmueble" required>
+              <option value="" selected disabled
+                >¿Qué inmueble deseas proteger?</option
+              >
+              <option value="Casa">Casa</option>
+              <option value="Apartamento">Apartamento</option>
+              <option value="Negocio">Negocio</option>
+              <option value="Bodega">Bodega</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="motivo">¿Por qué necesitas una alarma?</label>
+            <select name="motivo" id="motivo">
+              <option value="" selected disabled
+                >¿Por qué necesitas una alarma?</option
+              >
+              <option value="Prevención">Prevención</option>
+              <option value="Robo previo">Robo previo</option>
+              <option value="Recomendación">Recomendación</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="tiene_alarma">¿Tienes alarma?</label>
+            <select name="tiene_alarma" id="tiene_alarma">
+              <option value="" selected disabled>¿Tienes alarma?</option>
+              <option value="Sí">Sí</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="ubicacion">¿Dónde está situada?</label>
+            <select name="ubicacion" id="ubicacion">
+              <option value="" selected disabled>¿Dónde está situada?</option>
+              <option value="Residencial">Residencial</option>
+              <option value="Comercial">Comercial</option>
+              <option value="Industrial">Industrial</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="robos"
+              >¿Han robado alguna vez en tu casa o donde tus vecinos?</label
+            >
+            <select name="robos" id="robos">
+              <option value="" selected disabled
+                >¿Han robado alguna vez en tu casa o donde tus vecinos?</option
+              >
+              <option value="Sí">Sí</option>
+              <option value="No">No</option>
+              <option value="No sé">No sé</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="provincia"
+              >¿En qué provincia te encuentras? <span class="req">*</span
+              ></label
+            >
+            <select name="provincia" id="provincia" required>
+              <option value="" selected disabled
+                >¿En qué provincia te encuentras?</option
+              >
+              <option value="San José">San José</option>
+              <option value="Alajuela">Alajuela</option>
+              <option value="Cartago">Cartago</option>
+              <option value="Heredia">Heredia</option>
+              <option value="Guanacaste">Guanacaste</option>
+              <option value="Puntarenas">Puntarenas</option>
+              <option value="Limón">Limón</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="mensaje">Mensaje</label>
+            <textarea
+              name="mensaje"
+              id="mensaje"
+              rows="7"
+              placeholder="Describe tu proyecto o consulta..."></textarea>
+          </div>
+
+          <div id="form-status" class="form-status"></div>
+
+          <button class="submit-btn" type="submit" id="submit-btn">
+            <span class="btn-text">Enviar</span>
+            <span class="btn-loader" style="display: none;">Enviando...</span>
+          </button>
+        </form>
+
+        <style>
+          .form-status {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            display: none;
+            font-weight: 500;
+          }
+          .form-status.success {
+            display: block;
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+          }
+          .form-status.error {
+            display: block;
+            background: rgba(239, 68, 68, 0.1);
+            color: #ef4444;
+            border: 1px solid rgba(239, 68, 68, 0.2);
+          }
+          .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+          }
+        </style>
+
+        <script>
+          const form = document.getElementById(
+            "contact-form",
+          ) as HTMLFormElement;
+          const statusDiv = document.getElementById("form-status");
+          const submitBtn = document.getElementById(
+            "submit-btn",
+          ) as HTMLButtonElement;
+          const btnText = submitBtn?.querySelector(".btn-text") as HTMLElement;
+          const btnLoader = submitBtn?.querySelector(
+            ".btn-loader",
+          ) as HTMLElement;
+
+          if (form && statusDiv && submitBtn && btnText && btnLoader) {
+            form.addEventListener("submit", async (e) => {
+              e.preventDefault();
+
+              // Reset status
+              statusDiv.style.display = "none";
+              statusDiv.className = "form-status";
+
+              // Set loading state
+              submitBtn.disabled = true;
+              btnText.style.display = "none";
+              btnLoader.style.display = "inline";
+
+              const formData = new FormData(form);
+
+              try {
+                const response = await fetch("/api/send-email", {
+                  method: "POST",
+                  body: formData,
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                  statusDiv.textContent = result.message;
+                  statusDiv.classList.add("success");
+                  form.reset();
+                } else {
+                  statusDiv.textContent =
+                    result.message || "Error al enviar el mensaje.";
+                  statusDiv.classList.add("error");
+                }
+              } catch (error) {
+                statusDiv.textContent =
+                  "Error de conexión. Inténtalo de nuevo.";
+                statusDiv.classList.add("error");
+              } finally {
+                submitBtn.disabled = false;
+                btnText.style.display = "inline";
+                btnLoader.style.display = "none";
+                statusDiv.style.display = "block";
+              }
+            });
+          }
+        </script>
+      </section>
+    </div>
+  </section>
+</Layout>

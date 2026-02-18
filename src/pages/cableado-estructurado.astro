@@ -1,0 +1,214 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const cablingServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Cableado Estructurado y Redes LAN",
+  provider: {
+    "@type": "Organization",
+    name: "Proteck",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "Costa Rica",
+  },
+  description:
+    "Diseño e instalación de redes de cableado estructurado certificado Cat6/Cat6A con marcas líderes.",
+  offers: {
+    "@type": "Offer",
+    description: "Infraestructura de red para empresas",
+  },
+};
+---
+
+<Layout
+  title="Cableado Estructurado y Redes LAN | Proteck"
+  description="Diseño e instalación de cableado estructurado certificado (Cat6, Cat6A). Infraestructura de red confiable con marcas líderes: Panduit, Belden y CommScope."
+  pageSchema={cablingServiceSchema}
+>
+  <!-- HERO -->
+  <section class="page-hero page-hero--service">
+    <div class="container page-hero__inner">
+      <h1 class="page-hero__title" data-animate="fade-up">
+        Cableado Estructurado
+      </h1>
+      <p class="page-hero__subtitle" data-animate="fade-up" data-delay="200">
+        La base sólida de tu transformación digital
+      </p>
+    </div>
+  </section>
+
+  <!-- BLOQUE BLANCO -->
+  <section class="hero-gap" aria-hidden="true"></section>
+
+  <!-- TEXTO -->
+  <section class="page-section">
+    <div class="container" data-animate="fade-up">
+      <div class="text-box">
+        <p>
+          En el mundo de las <strong>redes LAN</strong> hay muchas formas de instalar
+          un cable, pero
+          <strong>solo una es la correcta</strong>: el cableado estructurado. A
+          través de los años hemos sido testigos de <strong
+            >innumerables problemas</strong
+          > en diferentes empresas debido a
+          <strong>diseños deficientes</strong> en la red de datos: mala implementación,
+          <strong>materiales de baja calidad</strong>, <strong
+            >incumplimiento de normas</strong
+          > fundamentales de cableado, entre otros factores que han generado <strong
+            >pérdidas enormes</strong
+          > y
+          <strong>atrasos operativos críticos</strong> en el día a día empresarial.
+        </p>
+
+        <p>
+          En <strong>Sistemas de Protección Electrónica Proteck</strong> brindamos
+          un <strong>servicio de cableado estructurado integral</strong>.
+          Realizamos desde el <strong>diseño inicial</strong> hasta el
+          <strong>monitoreo continuo</strong> de la red cableada, asegurándonos de
+          que el cliente esté
+          <strong>informado durante todo el proceso</strong> y comprenda su funcionamiento.
+          Esto permite que verifique personalmente que el trabajo cumple con los <strong
+            >más altos estándares de calidad</strong
+          >.
+        </p>
+
+        <p>
+          Trabajamos directamente con <strong>marcas líderes</strong> del mercado,
+          lo que nos permite
+          <strong>cumplir con cualquier requerimiento</strong>. Entre nuestras
+          marcas destacan
+          <strong>Panduit</strong>, <strong>Belden</strong>, <strong
+            >CommScope</strong
+          > y <strong>Siemon</strong>, ofreciendo <strong
+            >soluciones de máxima calidad</strong
+          > y <strong>garantía certificada</strong> para asegurar el <strong
+            >óptimo rendimiento</strong
+          > de su infraestructura de red.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 IMÁGENES (como tu referencia) -->
+  <section class="equipment-strip">
+    <div class="container equipment-grid-4" data-animate="stagger">
+      <div class="equipment-card">
+        <img
+          src="/images/cableado-estructurado-1.jpg"
+          alt="Caja / componente de cableado"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <div class="equipment-card">
+        <img
+          src="/images/cableado-estructurado-2.jpg"
+          alt="Patch cord / cable"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <div class="equipment-card">
+        <img
+          src="/images/cableado-estructurado-3.jpg"
+          alt="Bobina de cable"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <div class="equipment-card">
+        <img
+          src="/images/cableado-estructurado-4.jpg"
+          alt="Keystone / conector"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS (3 columnas) -->
+  <section class="benefits-strip">
+    <div class="container">
+      <div class="benefits-3" data-animate="stagger">
+        <article class="benefit-item">
+          <div class="benefit-item__icon blue">🧭</div>
+          <h3>Diseño Normativo Certificado</h3>
+          <p>
+            Implementación bajo estándares internacionales TIA/EIA-568 e ISO/IEC
+            11801, garantizando rendimiento óptimo y compatibilidad futura con
+            velocidades de hasta 10 Gbps.
+          </p>
+        </article>
+
+        <article class="benefit-item">
+          <div class="benefit-item__icon green">🧩</div>
+          <h3>Instalación Profesional Integral</h3>
+          <p>
+            Desde el diseño hasta la certificación: análisis de necesidades,
+            instalación con materiales premium, etiquetado profesional,
+            documentación completa y pruebas de rendimiento.
+          </p>
+        </article>
+
+        <article class="benefit-item">
+          <div class="benefit-item__icon blue">🏅</div>
+          <h3>Garantía y Soporte Continuo</h3>
+          <p>
+            Certificación oficial de fabricantes, garantía extendida, monitoreo
+            proactivo y soporte técnico especializado para mantener su red al
+            máximo rendimiento.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARCAS (2x2 como referencia) -->
+  <section class="brands">
+    <div class="brands__header">
+      <div class="container">
+        <h2 data-animate="fade-up">Marcas que distribuimos</h2>
+      </div>
+    </div>
+
+    <div class="brands__body">
+      <div class="container brands__grid-2x2" data-animate="stagger">
+        <div class="brand-logo">
+          <img
+            src="/images/logo-commscope.jpg"
+            alt="CommScope"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="brand-logo">
+          <img
+            src="/images/logo-panduit.jpg"
+            alt="Panduit"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="brand-logo">
+          <img
+            src="/images/logo-siemon.jpg"
+            alt="Siemon"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="brand-logo">
+          <img
+            src="/images/logo-belden.jpg"
+            alt="Belden"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

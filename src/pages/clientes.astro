@@ -1,0 +1,63 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Proteck - Clientes">
+  <main>
+    <h1
+      class="text-5xl font-bold text-center text-primary mb-12"
+      data-animate="fade-up"
+    >
+      Nuestros Clientes
+    </h1>
+
+    <section class="py-16 mb-16">
+      <p
+        class="text-xl text-text-body leading-relaxed max-w-4xl mx-auto text-center"
+        data-animate="fade-up"
+        data-delay="200"
+      >
+        En Proteck, nos enorgullecemos de construir relaciones duraderas con
+        nuestros clientes, ofreciendo soluciones de seguridad y
+        telecomunicaciones adaptadas a sus necesidades específicas. Nuestra
+        cartera incluye desde pequeñas empresas hasta grandes corporaciones y
+        entidades gubernamentales, a quienes brindamos soporte y tecnología de
+        primer nivel.
+      </p>
+
+      {/* TODO: Add client logos or testimonials here */}
+      <div
+        class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        data-animate="stagger"
+      >
+        <div
+          class="bg-white p-8 rounded-lg shadow-xl text-center transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+        >
+          <h3 class="text-2xl font-bold text-primary mb-3">Empresa A</h3>
+          <p class="text-lg text-text-body">
+            Proveedor líder de soluciones de seguridad para su cadena de
+            suministro.
+          </p>
+        </div>
+        <div
+          class="bg-white p-8 rounded-lg shadow-xl text-center transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+        >
+          <h3 class="text-2xl font-bold text-primary mb-3">Organización B</h3>
+          <p class="text-lg text-text-body">
+            Infraestructura de telecomunicaciones avanzada para una conectividad
+            sin fisuras.
+          </p>
+        </div>
+        <div
+          class="bg-white p-8 rounded-lg shadow-xl text-center transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+        >
+          <h3 class="text-2xl font-bold text-primary mb-3">Corporación C</h3>
+          <p class="text-lg text-text-body">
+            Sistema de rastreo GPS y control de flotas que optimiza sus
+            operaciones logísticas.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

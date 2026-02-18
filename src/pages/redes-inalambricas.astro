@@ -1,0 +1,176 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const wirelessServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Redes Inalámbricas Wi-Fi 6/7",
+  provider: {
+    "@type": "Organization",
+    name: "Proteck",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "Costa Rica",
+  },
+  description:
+    "Conectividad inalámbrica robusta y segura para empresas con tecnología Wi-Fi 6/7 y seguridad WPA3.",
+  offers: {
+    "@type": "Offer",
+    description: "Implementaciones Wi-Fi empresariales",
+  },
+};
+---
+
+<Layout
+  title="Redes Inalámbricas Empresariales Wi-Fi 6/7 | Proteck"
+  description="Conectividad inalámbrica robusta, segura y de alto rendimiento para empresas. Implementaciones híbridas con Wi-Fi 6/7 y seguridad WPA3 empresarial."
+  pageSchema={wirelessServiceSchema}
+>
+  <!-- HERO -->
+  <section class="page-hero page-hero--service">
+    <div class="container page-hero__inner">
+      <h1 class="page-hero__title" data-animate="fade-up">
+        Redes Inalámbricas
+      </h1>
+      <p class="page-hero__subtitle" data-animate="fade-up" data-delay="200">
+        Libertad para conectar, poder para crecer
+      </p>
+    </div>
+  </section>
+
+  <!-- BLOQUE BLANCO -->
+  <section class="hero-gap" aria-hidden="true"></section>
+
+  <!-- TEXTO -->
+  <section class="page-section">
+    <div class="container" data-animate="fade-up">
+      <div class="text-box">
+        <p>
+          Muchas veces cuando se habla de una red se piensa inmediatamente en
+          cables, pero
+          <strong>no necesariamente debe ser así</strong>. Las <strong
+            >redes inalámbricas</strong
+          > ofrecen
+          <strong>ventajas extraordinarias</strong> que las convierten en la solución
+          ideal para muchos escenarios empresariales. Son <strong
+            >poco invasivas</strong
+          > con la infraestructura del edificio, permiten
+          <strong>movilidad total</strong> a los usuarios, ofrecen un <strong
+            >amplio abanico</strong
+          > de configuraciones personalizables y, en muchos casos, representan una
+          <strong>inversión menor</strong> que una implementación de cableado estructurado
+          tradicional.
+        </p>
+
+        <p>
+          La <strong>escalabilidad</strong> es otra ventaja clave: las redes inalámbricas
+          permiten un
+          <strong>crecimiento flexible</strong> según las necesidades del negocio
+          y la robustez de los equipos utilizados. Es importante destacar que <strong
+            >no se trata de elegir una u otra</strong
+          > solución: las mejores prácticas recomiendan implementaciones híbridas
+          que combinen lo mejor del cableado con la flexibilidad del wireless, creando
+          una <strong>infraestructura completa y versátil</strong>.
+        </p>
+
+        <p>
+          En el pasado, las redes inalámbricas fueron injustamente catalogadas
+          como inseguras e inestables. Sin embargo, hoy la tecnología Wi-Fi 6/6E
+          y Wi-Fi 7 permite <strong>seguridad empresarial</strong> con WPA3, segmentación,
+          control de acceso y monitoreo continuo. Los dispositivos profesionales modernos
+          proporcionan
+          <strong>alto rendimiento</strong>, <strong>seguridad robusta</strong> y
+          <strong>confiabilidad comprobada</strong>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGEN CENTRAL -->
+  <section class="alarm-products alarm-products__single">
+    <div class="container alarm-products__single">
+      <img
+        src="/images/redes-inalambricas-01.jpg"
+        alt="Redes inalámbricas empresariales"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section class="benefits-strip">
+    <div class="container">
+      <div class="benefits-3" data-animate="stagger">
+        <article class="benefit-item">
+          <div class="benefit-item__icon blue">📶</div>
+          <h3>Conectividad Sin Límites</h3>
+          <p>
+            Tecnología Wi-Fi 6/6E con velocidades de hasta 10 Gbps, cobertura
+            inteligente que elimina zonas muertas y roaming transparente que
+            mantiene usuarios conectados en movimiento.
+          </p>
+        </article>
+
+        <article class="benefit-item">
+          <div class="benefit-item__icon green">↔️</div>
+          <h3>Flexibilidad Empresarial</h3>
+          <p>
+            Instalación no invasiva sin obras, escalabilidad inmediata según
+            demanda, redes segregadas para invitados/empleados y adaptación
+            instantánea a cambios del espacio.
+          </p>
+        </article>
+
+        <article class="benefit-item">
+          <div class="benefit-item__icon blue">🛡️</div>
+          <h3>Seguridad de Grado Militar</h3>
+          <p>
+            Encriptación WPA3 empresarial, autenticación 802.1X con radius,
+            detección de intrusos en tiempo real y políticas de acceso
+            granulares por usuario, dispositivo y aplicación.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARCAS -->
+  <section class="brands">
+    <div class="brands__header">
+      <div class="container">
+        <h2 data-animate="fade-up">Marcas que distribuimos</h2>
+      </div>
+    </div>
+
+    <div class="brands__body">
+      <div class="container brands__grid-3" data-animate="stagger">
+        <div class="brand-logo">
+          <img
+            src="/images/logo-ubiquiti-networks.jpg"
+            alt="Ubiquiti"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="brand-logo">
+          <img
+            src="/images/logo-wi-tek-communications-solutions.jpg"
+            alt="Wi-TeX"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="brand-logo">
+          <img
+            src="/images/logo-mikrotik.jpg"
+            alt="MikroTik"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

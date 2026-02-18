@@ -1,0 +1,52 @@
+---
+import { Image } from 'astro:assets';
+import logoBlanco from '../assets/images/logo-proteck-blanco.png';
+---
+
+<footer class="bg-dark-bg text-white py-12 px-6">
+  <div class="container mx-auto">
+    {/* Logo and Social Media Section (Centered) */}
+    <div class="text-center mb-10">
+      <Image src={logoBlanco} alt="Proteck Logo Blanco" width={180} class="mx-auto mb-6" />
+      <div class="flex justify-center space-x-6">
+        {/* Placeholder para iconos de redes sociales */}
+        <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-accent p-2 border border-gray-400 rounded-full transition-colors duration-300">
+          {/* Icono de Facebook */} <div class="w-6 h-6"></div>
+        </a>
+        <a href="#" aria-label="Twitter" class="text-gray-400 hover:text-accent p-2 border border-gray-400 rounded-full transition-colors duration-300">
+          {/* Icono de Twitter */} <div class="w-6 h-6"></div>
+        </a>
+        <a href="#" aria-label="LinkedIn" class="text-gray-400 hover:text-accent p-2 border border-gray-400 rounded-full transition-colors duration-300">
+          {/* Icono de LinkedIn */} <div class="w-6 h-6"></div>
+        </a>
+      </div>
+    </div>
+
+    {/* Enlaces Rápidos y Datos de Contacto (2 Column Grid) */}
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-gray-700 pt-10">
+      {/* Columna 1: Enlaces Rápidos */}
+      <div>
+        <h3 class="text-2xl font-bold mb-5">Enlaces Rápidos</h3>
+        <ul class="space-y-3 text-lg text-gray-300">
+          <li><a href="/" class="hover:text-accent transition-colors duration-300">Inicio</a></li>
+          <li><a href="/quienes-somos" class="hover:text-accent transition-colors duration-300">Quiénes Somos</a></li>
+          <li><a href="/soluciones" class="hover:text-accent transition-colors duration-300">Soluciones</a></li>
+          <li><a href="/productos" class="hover:text-accent transition-colors duration-300">Productos</a></li>
+          <li><a href="/clientes" class="hover:text-accent transition-colors duration-300">Clientes</a></li>
+          <li><a href="/contactos" class="hover:text-accent transition-colors duration-300">Contacto</a></li>
+        </ul>
+      </div>
+
+      {/* Columna 2: Datos de Contacto */}
+      <div>
+        <h3 class="text-2xl font-bold mb-5">Contacto</h3>
+        <p class="mb-3 text-lg text-gray-300">Tel: <a href="tel:22481071" class="hover:text-accent transition-colors duration-300">2248-1071</a></p>
+        <p class="mb-3 text-lg text-gray-300">Email: <a href="mailto:info@speproteck.com" class="hover:text-accent transition-colors duration-300">info@speproteck.com</a></p>
+        <p class="text-lg text-gray-300">Dirección: 400 este del Gimnasio Nacional</p>
+      </div>
+    </div>
+  </div>
+  <div class="text-center mt-12 text-gray-500 text-sm border-t border-gray-700 pt-8">
+    &copy; {new Date().getFullYear()} Proteck. Todos los derechos reservados.
+  </div>
+</footer>

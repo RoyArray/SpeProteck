@@ -1,0 +1,309 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import camaraAxis from "../assets/images/camara-axis-communications.jpg";
+import camaraHikvision from "../assets/images/camara-hikvision.jpg";
+import camaraPelco from "../assets/images/camara-pelco.jpg";
+import bodyCamImg from "../assets/images/body-cam.jpg";
+import logoHik from "../assets/images/logo-hik-vision.jpg";
+import logoHoneywell from "../assets/images/logo-honeywell.jpg";
+import logoPelco from "../assets/images/logo-pelco.jpg";
+import logoAxis from "../assets/images/logo-axis-communications.jpg";
+import logoHanwha from "../assets/images/logo-hanwha-vision.jpg";
+import logoDahua from "../assets/images/logo-dahua.jpg";
+import logoSpeco from "../assets/images/logo-speco-technologies.jpg";
+import logoAvigilon from "../assets/images/logo-avigilon.jpg";
+import logoProvision from "../assets/images/logo-provision-isr.jpg";
+
+const cctvServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Video Vigilancia IP",
+  provider: {
+    "@type": "Organization",
+    name: "Proteck",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "Costa Rica",
+  },
+  description:
+    "Sistemas de video vigilancia de alta definición con analítica inteligente y monitoreo remoto.",
+  offers: {
+    "@type": "Offer",
+    description: "Sistemas personalizados de cámaras IP",
+  },
+};
+---
+
+<Layout
+  title="Video Vigilancia IP y Body Cams | Proteck"
+  description="Soluciones de video vigilancia IP con inteligencia integrada y analítica avanzada. Distribuidores de marcas líderes: Hikvision, Axis, Honeywell y más."
+  pageSchema={cctvServiceSchema}
+>
+  <!-- HERO (igual que las otras páginas) -->
+  <section class="page-hero page-hero--service">
+    <div class="container page-hero__inner">
+      <h1 class="page-hero__title" data-animate="fade-up">Video Vigilancia</h1>
+      <p class="page-hero__subtitle" data-animate="fade-up" data-delay="200">
+        Videovigilancia IP: Visión Clara, Seguridad Inteligente
+      </p>
+    </div>
+  </section>
+
+  <!-- BLOQUE BLANCO (igual que las otras páginas) -->
+  <section class="hero-gap" aria-hidden="true"></section>
+
+  <!-- TEXTO + 3 IMÁGENES (igual estilo referencia) -->
+  <section class="page-section">
+    <div class="container" data-animate="fade-up">
+      <div class="text-box">
+        <p>
+          La <strong>videovigilancia IP</strong> es una solución de seguridad que
+          ha ganado gran impulso en los últimos años en el mercado mundial, especialmente
+          en Latinoamérica. Esto se debe a que presenta <strong
+            >ventajas y características superiores</strong
+          > a su tecnología predecesora, el CCTV o sistemas analógicos de videoseguridad.
+        </p>
+
+        <p>
+          Son múltiples los factores que la hacen superior: <strong
+            >calidad de imagen excepcional</strong
+          >,
+          <strong>mayor robustez</strong>, relación calidad-precio favorable y,
+          sobre todo, son <strong>sistemas abiertos</strong>
+          que permiten un mejor aprovechamiento del video mediante analítica inteligente.
+          Es una solución con
+          <strong>funcionalidad real</strong>, a diferencia de los sistemas CCTV
+          tradicionales que, aunque brindan una sensación de seguridad, está
+          comprobado que no cuentan con la calidad necesaria para ser
+          completamente útiles.
+        </p>
+
+        <p>
+          Los sistemas de videovigilancia IP ofrecen una gama completa de
+          soluciones para diversos segmentos y aplicaciones industriales. Sin
+          importar si necesita pocas cámaras o miles de ellas, las <strong
+            >soluciones son fáciles de instalar</strong
+          >
+          y se adaptan a las necesidades más cambiantes.
+        </p>
+      </div>
+
+      <!-- 3 imágenes de cámaras (como tu referencia) -->
+      <section class="vv-cameras" aria-label="Cámaras de videovigilancia">
+        <div class="vv-cameras__grid" data-animate="stagger">
+          <div class="vv-cameras__item">
+            <Image
+              src={camaraAxis}
+              alt="Cámara IP Axis de alta resolución"
+              width={400}
+              height={300}
+              loading="lazy"
+            />
+          </div>
+          <div class="vv-cameras__item">
+            <Image
+              src={camaraHikvision}
+              alt="Cámara IP Hikvision con visión nocturna"
+              width={400}
+              height={300}
+              loading="lazy"
+            />
+          </div>
+          <div class="vv-cameras__item">
+            <Image
+              src={camaraPelco}
+              alt="Cámara IP Pelco para exteriores"
+              width={400}
+              height={300}
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS (3 columnas como tus otras páginas) -->
+  <section class="benefits-strip">
+    <div class="container">
+      <div class="benefits-3" data-animate="stagger">
+        <article class="benefit-item">
+          <div class="benefit-item__icon blue">➕</div>
+          <h3>Tecnología Superior</h3>
+          <p>
+            Calidad de imagen HD/4K que supera ampliamente a los sistemas
+            analógicos, permitiendo identificación clara de personas y detalles
+            críticos.
+          </p>
+        </article>
+
+        <article class="benefit-item">
+          <div class="benefit-item__icon green">📈</div>
+          <h3>Flexibilidad y Escalabilidad</h3>
+          <p>
+            Sistemas abiertos que crecen con tu negocio: desde pocas cámaras
+            hasta miles, con instalación simple y adaptación a cualquier
+            necesidad.
+          </p>
+        </article>
+
+        <article class="benefit-item">
+          <div class="benefit-item__icon blue">🧠</div>
+          <h3>Inteligencia Integrada</h3>
+          <p>
+            Analítica avanzada que convierte el video en información accionable:
+            detección de intrusos, conteo de personas, reconocimiento de
+            patrones y alertas en tiempo real.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO 2 (Body Cam como tu screenshot) -->
+  <section class="page-hero page-hero--service page-hero--compact">
+    <div class="container page-hero__inner">
+      <h2 class="page-hero__title page-hero__title--h2" data-animate="fade-up">
+        Body Cam
+      </h2>
+      <p class="page-hero__subtitle" data-animate="fade-up" data-delay="200">
+        Cámaras y seguridad: una alianza confiable
+      </p>
+    </div>
+  </section>
+
+  <!-- TEXTO BODY CAM + IMAGEN -->
+  <section class="page-section">
+    <div class="container" data-animate="fade-up">
+      <div class="vv-bodycam">
+        <div class="vv-bodycam__text">
+          <h3 class="vv-bodycam__heading">MAYOR TRANSPARENCIA</h3>
+          <p>
+            Las Bodycams brindan mayor transparencia al actuar. Las imágenes y
+            videos capturados durante el relacionamiento policía y ciudadano
+            proporcionan una mejor documentación para confirmar si existió
+            agresiones incluso en cualquier proceso judicial.
+          </p>
+
+          <h3 class="vv-bodycam__heading">
+            MAYOR RAPIDEZ EN LA RESOLUCIÓN DE INCIDENTES
+          </h3>
+          <p>
+            Permiten una resolución más rápida de quejas en las que se alega uso
+            excesivo de la fuerza y mala conducta de los policías y empleados.
+            Las imágenes y videos capturados ayudan a corroborar los hechos.
+          </p>
+        </div>
+
+        <div class="vv-bodycam__image">
+          <Image
+            src={bodyCamImg}
+            alt="Cámara corporal (Body Cam) profesional"
+            width={600}
+            height={400}
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARCAS (header con degradado + grid 3x3 como la referencia) -->
+  <section class="brands">
+    <div class="brands__header">
+      <div class="container">
+        <h2 data-animate="fade-up">Marcas que distribuimos</h2>
+      </div>
+    </div>
+
+    <div class="brands__body">
+      <div class="container vv-brands-grid" data-animate="stagger">
+        <div class="brand-logo">
+          <Image
+            src={logoHik}
+            alt="Hikvision"
+            width={120}
+            height={60}
+            loading="lazy"
+          />
+        </div>
+        <div class="brand-logo">
+          <Image
+            src={logoHoneywell}
+            alt="Honeywell"
+            width={120}
+            height={60}
+            loading="lazy"
+          />
+        </div>
+        <div class="brand-logo">
+          <Image
+            src={logoPelco}
+            alt="Pelco"
+            width={120}
+            height={60}
+            loading="lazy"
+          />
+        </div>
+
+        <div class="brand-logo">
+          <Image
+            src={logoAxis}
+            alt="Axis Communications"
+            width={120}
+            height={60}
+            loading="lazy"
+          />
+        </div>
+        <div class="brand-logo">
+          <Image
+            src={logoHanwha}
+            alt="Hanwha Vision"
+            width={120}
+            height={60}
+            loading="lazy"
+          />
+        </div>
+        <div class="brand-logo">
+          <Image
+            src={logoDahua}
+            alt="Dahua"
+            width={120}
+            height={60}
+            loading="lazy"
+          />
+        </div>
+
+        <div class="brand-logo">
+          <Image
+            src={logoSpeco}
+            alt="Speco Technologies"
+            width={120}
+            height={60}
+            loading="lazy"
+          />
+        </div>
+        <div class="brand-logo">
+          <Image
+            src={logoAvigilon}
+            alt="Avigilon"
+            width={120}
+            height={60}
+            loading="lazy"
+          />
+        </div>
+        <div class="brand-logo">
+          <Image
+            src={logoProvision}
+            alt="Provision ISR"
+            width={120}
+            height={60}
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

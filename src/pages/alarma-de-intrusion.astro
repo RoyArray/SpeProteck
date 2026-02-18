@@ -1,0 +1,180 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const intrusionServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Alarmas de Intrusión",
+  provider: {
+    "@type": "Organization",
+    name: "Proteck",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "Costa Rica",
+  },
+  description:
+    "Sistemas de detección de intrusión avanzados con respuesta automatizada y función disuasoria.",
+  offers: {
+    "@type": "Offer",
+    description: "Sistemas de seguridad perimetral",
+  },
+};
+---
+
+<Layout
+  title="Alarmas de Intrusión y Seguridad Perimetral | Proteck"
+  description="Proteja su propiedad con sistemas de alarma de intrusión avanzados. Detección instantánea, respuesta automatizada y función disuasoria profesional."
+  pageSchema={intrusionServiceSchema}
+>
+  <!-- HERO -->
+  <section class="page-hero page-hero--service">
+    <div class="container page-hero__inner">
+      <h1 class="page-hero__title" data-animate="fade-up">
+        Alarmas de Intrusión
+      </h1>
+      <p class="page-hero__subtitle" data-animate="fade-up" data-delay="200">
+        Detectamos el peligro antes de que sea tarde
+      </p>
+    </div>
+  </section>
+
+  <!-- BLOQUE BLANCO -->
+  <section class="hero-gap" aria-hidden="true"></section>
+
+  <!-- TEXTO -->
+  <section class="page-section">
+    <div class="container" data-animate="fade-up">
+      <div class="text-box">
+        <p>
+          Los <strong>sistemas de alarma de intrusión</strong> son elementos de <strong
+            >seguridad pasiva</strong
+          >
+          fundamentales en cualquier estrategia de protección. Aunque <strong
+            >no evitan directamente</strong
+          > una situación anormal, son <strong
+            >capaces de detectarla y advertir inmediatamente</strong
+          >, cumpliendo una
+          <strong>función disuasoria crucial</strong> frente a posibles amenazas e
+          intrusiones.
+        </p>
+
+        <p>
+          Las alarmas modernas van <strong
+            >más allá de la simple detección</strong
+          >: son capaces de
+          <strong>reducir drásticamente el tiempo de respuesta</strong> ante cualquier
+          incidente, permitiendo tomar
+          <strong>acciones inmediatas</strong> que minimizan pérdidas y daños potenciales.
+          Esta rapidez de reacción marca la diferencia entre un incidente menor y
+          una pérdida significativa.
+        </p>
+
+        <p>
+          Una vez que el sistema <strong>detecta una anomalía</strong>, puede
+          ejecutar <strong>múltiples acciones automáticas</strong>
+          según la configuración establecida: <strong
+            >enviar notificaciones instantáneas</strong
+          > con mensajes de texto,
+          <strong>transmitir imágenes en tiempo real</strong> al celular del propietario,
+          activar señales audibles y visuales en el lugar, y reportar <strong
+            >directamente a centrales de monitoreo profesional</strong
+          > que pueden coordinar la respuesta con autoridades. Todo esto ocurre en
+          <strong>cuestión de segundos</strong>, garantizando una
+          <strong>protección integral 24/7</strong>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMÁGENES (2 columnas) -->
+  <section class="alarm-products">
+    <div class="container alarm-products__grid" data-animate="stagger">
+      <div class="alarm-products__img">
+        <img
+          src="/images/imagen-ajax.jpg"
+          alt="Sistema AJAX - kit de alarma inalámbrica"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+
+      <div class="alarm-products__img">
+        <img
+          src="/images/imagen-paradox.jpg"
+          alt="Kit de alarma con panel y sensores"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS (3 columnas) -->
+  <section class="benefits-strip">
+    <div class="container">
+      <div class="benefits-3" data-animate="stagger">
+        <article class="benefit-item">
+          <div class="benefit-item__icon blue">⚠️</div>
+          <h3>Detección Instantánea</h3>
+          <p>
+            Sensores de última generación que identifican intrusiones,
+            movimiento, rotura de vidrios y apertura de puertas/ventanas con
+            precisión milimétrica y cero falsas alarmas.
+          </p>
+        </article>
+
+        <article class="benefit-item">
+          <div class="benefit-item__icon green">🔔</div>
+          <h3>Respuesta Automatizada</h3>
+          <p>
+            Sistema inteligente que ejecuta acciones programadas: notificaciones
+            móviles, activación de sirenas, grabación de video y conexión
+            directa con central de monitoreo en segundos.
+          </p>
+        </article>
+
+        <article class="benefit-item">
+          <div class="benefit-item__icon blue">🛡️</div>
+          <h3>Disuasión Efectiva</h3>
+          <p>
+            La presencia visible del sistema reduce hasta un 80% los intentos de
+            intrusión, mientras que la respuesta rápida minimiza pérdidas cuando
+            ocurre un incidente.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARCAS -->
+  <section class="brands">
+    <div class="brands__header">
+      <div class="container">
+        <h2 data-animate="fade-up">Marcas que distribuimos</h2>
+      </div>
+    </div>
+
+    <div class="brands__body">
+      <div class="container brands__grid" data-animate="stagger">
+        <div class="brand-logo">
+          <img
+            src="/images/logo-paradox-security-systems.jpg"
+            alt="Paradox"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+
+        <div class="brand-logo">
+          <img
+            src="/images/logo-ajax.jpg"
+            alt="AJAX"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

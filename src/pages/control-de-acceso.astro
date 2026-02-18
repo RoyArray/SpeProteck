@@ -1,0 +1,202 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const accessServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Control de Acceso Biométrico",
+  provider: {
+    "@type": "Organization",
+    name: "Proteck",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "Costa Rica",
+  },
+  description:
+    "Gestión de acceso mediante biometría, tarjetas y reconocimiento facial. Pasillos de seguridad y torniquetes.",
+  offers: {
+    "@type": "Offer",
+    description: "Soluciones de control de acceso corporativo",
+  },
+};
+---
+
+<Layout
+  title="Sistemas de Control de Acceso Biométrico | Proteck"
+  description="Gestione el acceso a sus instalaciones con biometría, tarjetas y reconocimiento facial. Pasillos de seguridad, torniquetes y gestión centralizada."
+  pageSchema={accessServiceSchema}
+>
+  <!-- HERO (igual que las otras páginas) -->
+  <section class="page-hero page-hero--service">
+    <div class="container page-hero__inner">
+      <h1 class="page-hero__title" data-animate="fade-up">Control de Acceso</h1>
+      <p class="page-hero__subtitle" data-animate="fade-up" data-delay="200">
+        Control de Acceso: Tu primera línea de defensa inteligente
+      </p>
+    </div>
+  </section>
+
+  <!-- BLOQUE BLANCO (igual que las otras páginas) -->
+  <section class="hero-gap" aria-hidden="true"></section>
+
+  <!-- TEXTO (igual que las otras páginas) -->
+  <section class="page-section">
+    <div class="container" data-animate="fade-up">
+      <div class="text-box">
+        <p>
+          El <strong>control de acceso</strong> es un proceso de seguridad que permite
+          a las organizaciones
+          <strong>gestionar quién está autorizado</strong> a ingresar a sus instalaciones
+          y acceder a recursos corporativos. Un sistema de control de acceso seguro
+          utiliza <strong>políticas que verifican la identidad</strong> de las personas
+          y garantiza que se otorguen los <strong
+            >niveles de autorización</strong
+          > adecuados según el perfil de cada usuario.
+        </p>
+
+        <p>
+          Implementar control de acceso es un <strong
+            >componente crucial de la seguridad</strong
+          > integral, garantizando que
+          <strong>solo las personas autorizadas</strong> tengan acceso a las áreas
+          correspondientes. Esta tecnología no solo protege los <strong
+            >recursos físicos</strong
+          >, sino también la <strong>información</strong> y los <strong
+            >activos</strong
+          >
+          de la empresa. Contamos con diversas <strong
+            >marcas y soluciones</strong
+          > según las necesidades específicas de cada cliente.
+        </p>
+
+        <p>
+          Los <strong>pasillos de seguridad</strong> y <strong
+            >torniquetes</strong
+          > ofrecen control automatizado del flujo de personas. Son soluciones funcionales
+          y duraderas, ideales para cualquier tipo de control de tránsito. Los pasillos
+          de seguridad proporcionan un alto nivel de control bidireccional sin comprometer
+          la seguridad del usuario, mientras que su
+          <strong>diseño moderno y discreto</strong> se integra perfectamente en entornos
+          corporativos. Las <strong>puertas de seguridad de vidrio</strong> representan
+          la solución más robusta, combinando seguridad física y electrónica.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 IMÁGENES (igual a la referencia) -->
+  <section class="equipment-strip">
+    <div class="container equipment-grid" data-animate="stagger">
+      <div class="equipment-card">
+        <img
+          src="/images/control-de-acceso-01.jpg"
+          alt="Pasillos y torniquetes de seguridad"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+
+      <div class="equipment-card">
+        <img
+          src="/images/control-de-acceso-02.jpg"
+          alt="Terminal de control de acceso"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+
+      <div class="equipment-card">
+        <img
+          src="/images/control-de-acceso-03.jpg"
+          alt="Biometría y credenciales"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS (igual que las otras páginas) -->
+  <section class="benefits-strip">
+    <div class="container">
+      <div class="benefits-3" data-animate="stagger">
+        <article class="benefit-item">
+          <div class="benefit-item__icon blue">🔒</div>
+          <h3>Seguridad Inteligente</h3>
+          <p>
+            Verificación de identidad mediante múltiples tecnologías: tarjetas,
+            biometría, códigos QR y reconocimiento facial, garantizando que solo
+            personal autorizado acceda a áreas restringidas.
+          </p>
+        </article>
+
+        <article class="benefit-item">
+          <div class="benefit-item__icon green">🔁</div>
+          <h3>Flujo Eficiente</h3>
+          <p>
+            Gestión automatizada del tránsito de personas con pasillos y
+            torniquetes de alta velocidad que procesan hasta 60 personas por
+            minuto sin comprometer la seguridad.
+          </p>
+        </article>
+
+        <article class="benefit-item">
+          <div class="benefit-item__icon blue">⚙️</div>
+          <h3>Gestión Centralizada</h3>
+          <p>
+            Control total desde una plataforma única: administre permisos,
+            horarios, visitantes y genere reportes en tiempo real desde
+            cualquier dispositivo.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARCAS (igual que las otras páginas) -->
+  <section class="brands">
+    <div class="brands__header">
+      <div class="container">
+        <h2 data-animate="fade-up">Marcas que distribuimos</h2>
+      </div>
+    </div>
+
+    <div class="brands__body">
+      <div class="container brands__grid-4" data-animate="stagger">
+        <div class="brand-logo">
+          <img
+            src="/images/logo-hik-vision.jpg"
+            alt="Hikvision"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="brand-logo">
+          <img
+            src="/images/logo-suprema.jpg"
+            alt="Suprema"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="brand-logo">
+          <img
+            src="/images/logo-zkteco.jpg"
+            alt="ZKTeco"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="brand-logo">
+          <img
+            src="/images/logo-welcome-control-de-visitantes.jpg"
+            alt="Welcome"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

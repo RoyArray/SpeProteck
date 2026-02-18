@@ -1,0 +1,38 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/images/logo-proteck.png';
+import MobileMenu from './MobileMenu.jsx';
+---
+
+<header class="bg-primary text-white py-4 px-6 relative">
+  <nav class="container mx-auto flex justify-between items-center">
+    <a href="/">
+      <Image src={logo} alt="Proteck Logo" width={150} />
+    </a>
+    
+    <div class="md:hidden">
+      <MobileMenu client:load />
+    </div>
+
+    <ul class="hidden md:flex space-x-6 items-center">
+      <li><a href="/" class="hover:text-accent">Inicio</a></li>
+      <li><a href="/quienes-somos" class="hover:text-accent">Quiénes Somos</a></li>
+      <li class="relative group">
+        <button class="hover:text-accent">Soluciones</button>
+        <ul class="absolute hidden group-hover:block bg-primary text-white p-2 space-y-2 rounded shadow-lg z-10">
+          <li><a href="/seguridad-electronica" class="hover:text-accent">Seguridad Electrónica</a></li>
+          <li><a href="/seguridad-electronica#cctv" class="hover:text-accent text-sm">CCTV</a></li>
+          <li><a href="/seguridad-electronica#gps" class="hover:text-accent text-sm">GPS</a></li>
+          <li><a href="/seguridad-electronica#alarmas" class="hover:text-accent text-sm">Alarmas</a></li>
+          <li><a href="/seguridad-electronica#control-acceso" class="hover:text-accent text-sm">Control de Acceso</a></li>
+          <li><a href="/telecomunicaciones" class="hover:text-accent">Telecomunicaciones</a></li>
+        </ul>
+      </li>
+      <li><a href="/productos" class="hover:text-accent">Productos</a></li>
+      <li><a href="/clientes" class="hover:text-accent">Clientes</a></li>
+      <li>
+        <a href="/contactos" class="bg-accent text-white px-4 py-2 rounded hover:bg-secondary transition duration-300">Contacto</a>
+      </li>
+    </ul>
+  </nav>
+</header>

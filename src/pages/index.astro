@@ -1,0 +1,341 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+// Servicios
+import gpsImage from "../assets/images/gps-1.png";
+import cctvImage from "../assets/images/camara-hikvision.jpg";
+import alarmaImage from "../assets/images/alarma-contra-incendio-01.jpg";
+import controlAccesoImage from "../assets/images/control-de-acceso-01.jpg";
+
+// Soluciones
+import logisticaImage from "../assets/images/redes-inalambricas-01.jpg";
+import gestionActivosImage from "../assets/images/cableado-estructurado-1.jpg";
+import alquilerImage from "../assets/images/canalizaciones-01.jpg";
+import gobiernoImage from "../assets/images/sistema-de-audio-y-megafonia.jpg";
+
+// Productos
+import r58lGpsImage from "../assets/images/gps-r58l-main.png";
+import r12lGpsImage from "../assets/images/gps-r12l-main.png";
+import v7CamaraImage from "../assets/images/cctv-v7-1.webp";
+// Esquema para AEO (Service List)
+const serviceListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Servicios de Protección Electrónica",
+  description:
+    "Lista de servicios de seguridad ofrecidos por Proteck en Costa Rica.",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Rastreo GPS y Telemetría",
+      url: new URL("/gps", Astro.url).href,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Video Vigilancia IP",
+      url: new URL("/video-vigilancia", Astro.url).href,
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Control de Acceso Biométrico",
+      url: new URL("/control-de-acceso", Astro.url).href,
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
+      name: "Alarmas de Intrusión",
+      url: new URL("/alarma-de-intrusion", Astro.url).href,
+    },
+    {
+      "@type": "ListItem",
+      position: 5,
+      name: "Alarmas contra Incendio",
+      url: new URL("/alarma", Astro.url).href,
+    },
+  ],
+};
+
+// Esquema para AEO (FAQ)
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "¿Qué servicios de seguridad ofrece Proteck?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Proteck ofrece una gama completa de servicios de protección electrónica en Costa Rica, incluyendo rastreo GPS y telemetría avanzada, sistemas de video vigilancia IP, control de acceso biométrico, alarmas de intrusión y sistemas de alarma contra incendio certificados.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Proteck ofrece monitoreo de flotas por GPS?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí, somos expertos en rastreo satelital y telemetría. Ofrecemos monitoreo en tiempo real 24/7, optimización de rutas, control de combustible y seguridad activa para todo tipo de flotas en Costa Rica.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Sus sistemas de alarma cumplen con normativas?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Nuestros sistemas de alarma contra incendio están certificados y cumplen estrictamente con las normas NFPA y las regulaciones locales de Costa Rica para garantizar la máxima seguridad.",
+      },
+    },
+  ],
+};
+
+// Combinar esquemas para el layout
+const consolidatedSchema = [serviceListSchema, faqSchema];
+---
+
+<Layout
+  title="Proteck - Servicios de Protección Electrónica"
+  description="Proteck ofrece soluciones integrales de seguridad: GPS, CCTV, alarmas contra incendio, control de acceso y telecomunicaciones en Costa Rica. Proteja sus activos con expertos."
+  pageSchema={consolidatedSchema}
+>
+  <!-- HERO -->
+  <section class="hero">
+    <video
+      autoplay
+      loop
+      muted
+      playsinline
+      class="hero__video"
+      poster="/hero-poster.webp"
+    >
+      <source src="/videos/home-proteck-video-bg.mp4" type="video/mp4" />
+    </video>
+    <div class="hero__overlay"></div>
+
+    <div class="hero__content container">
+      <h1 class="hero__title" data-animate="fade-up">
+        SERVICIOS DE PROTECCIÓN ELECTRÓNICA
+      </h1>
+      <p class="hero__subtitle" data-animate="fade-up" data-delay="200">
+        SIEMPRE SEGURO
+      </p>
+      <a
+        class="btn btn--accent"
+        href="/contactos"
+        data-animate="fade-up"
+        data-delay="400">Obtén una Cotización Ahora</a
+      >
+    </div>
+  </section>
+
+  <!-- NUESTROS SERVICIOS (Clickeable, sin romper layout) -->
+  <section class="section section--services">
+    <div class="container">
+      <h2 class="section-title" data-animate="fade-up">Nuestros Servicios</h2>
+
+      <div class="services-icons" data-animate="stagger">
+        <a class="service-icon" href="/gps">
+          <Image
+            src={gpsImage}
+            alt=""
+            class="service-icon__img"
+            width={48}
+            height={48}
+            loading="lazy"
+          />
+          <span class="service-icon__label">GPS</span>
+        </a>
+
+        <a class="service-icon" href="/cctv">
+          <Image
+            src={cctvImage}
+            alt=""
+            class="service-icon__img"
+            width={48}
+            height={48}
+            loading="lazy"
+          />
+          <span class="service-icon__label">CCTV</span>
+        </a>
+
+        <a class="service-icon" href="/alarma">
+          <Image
+            src={alarmaImage}
+            alt=""
+            class="service-icon__img"
+            width={48}
+            height={48}
+            loading="lazy"
+          />
+          <span class="service-icon__label">ALARMA</span>
+        </a>
+
+        <a class="service-icon" href="/control-de-acceso">
+          <Image
+            src={controlAccesoImage}
+            alt=""
+            class="service-icon__img"
+            width={48}
+            height={48}
+            loading="lazy"
+          />
+          <span class="service-icon__label">CONTROL DE<br />ACCESO</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUCIONES POR INDUSTRIA (más grande y visible) -->
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="section-title" data-animate="fade-up">
+        Soluciones por Industria
+      </h2>
+
+      <div class="industry-grid" data-animate="stagger">
+        <div class="industry-item">
+          <h3>Logística y Entrega</h3>
+          <p>
+            Visibilidad completa de la cadena de suministro con seguimiento en
+            tiempo real para abordar proactivamente cualquier problema que pueda
+            surgir.
+          </p>
+        </div>
+
+        <div class="industry-item">
+          <h3>Gestión de Activos</h3>
+          <p>
+            Protección contra robo y pérdida con alertas en tiempo real y
+            opciones de recuperación para mitigar riesgos de manera efectiva.
+          </p>
+        </div>
+
+        <div class="industry-item">
+          <h3>Alquiler y Arrendamiento</h3>
+          <p>
+            Prevención de fraudes con dispositivos IoT que detectan
+            manipulación, uso no autorizado y patrones de conducción inusuales.
+          </p>
+        </div>
+
+        <div class="industry-item">
+          <h3>Utilidades Gubernamentales</h3>
+          <p>
+            Monitoreo de activos en ubicaciones remotas e inaccesibles,
+            asegurando cobertura completa de la infraestructura de utilidades.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTOS DESTACADOS (como antes, con todos los elementos) -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title" data-animate="fade-up">Productos Destacados</h2>
+
+      <div class="featured-products-with-img" data-animate="stagger">
+        <article class="featured-product">
+          <Image
+            src={r58lGpsImage}
+            alt="R58L - GPS OBD2 4G"
+            class="featured-product__img"
+            width={280}
+            height={150}
+            loading="lazy"
+          />
+          <h3>R58L - GPS OBD2 4G</h3>
+          <p>
+            Fácil instalación en puerto OBD-II. Diagnósticos del vehículo y
+            seguimiento 24/7.
+          </p>
+        </article>
+
+        <article class="featured-product">
+          <Image
+            src={r12lGpsImage}
+            alt="R12L - GPS con Corte de Combustible"
+            class="featured-product__img"
+            width={280}
+            height={150}
+            loading="lazy"
+          />
+          <h3>R12L - GPS con Corte de Combustible</h3>
+          <p>
+            Dispositivo 4G CAT1 con más de 10 alarmas y corte remoto de
+            combustible. IP65.
+          </p>
+        </article>
+
+        <article class="featured-product">
+          <Image
+            src={v7CamaraImage}
+            alt="V7 - Cámara Dual 4G"
+            class="featured-product__img"
+            width={280}
+            height={150}
+            loading="lazy"
+          />
+          <h3>V7 - Cámara Dual 4G</h3>
+          <p>Cámara dual HD con transmisión 4G y grabación frontal/cabina.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION (AEO focused) -->
+  <section class="section section--faq">
+    <div class="container container--narrow">
+      <h2 class="section-title" data-animate="fade-up">Preguntas Frecuentes</h2>
+      <div class="faq-grid" data-animate="stagger">
+        <details class="faq-item">
+          <summary>¿Qué servicios de seguridad ofrece Proteck?</summary>
+          <div class="faq-content">
+            <p>
+              Proteck ofrece una gama completa de servicios de protección
+              electrónica en Costa Rica, incluyendo rastreo GPS, video
+              vigilancia IP, control de acceso, y alarmas contra incendio e
+              intrusión.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Proteck ofrece monitoreo de flotas por GPS?</summary>
+          <div class="faq-content">
+            <p>
+              Sí, somos expertos en rastreo satelital. Ofrecemos monitoreo en
+              tiempo real 24/7, optimización de rutas y seguridad activa para
+              flotas empresariales.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Sus sistemas de alarma cumplen con normativas?</summary>
+          <div class="faq-content">
+            <p>
+              Nuestros sistemas de alarma contra incendio cumplen estrictamente
+              con las normas NFPA y las regulaciones locales para garantizar la
+              máxima seguridad y cumplimiento.
+            </p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final">
+    <div class="container">
+      <h2 class="cta-final__title">¿Listo para Proteger sus Activos?</h2>
+      <p class="cta-final__text">
+        Nuestro equipo de expertos está listo para ofrecerte la solución de
+        seguridad perfecta. Contáctanos hoy mismo para una consulta gratuita.
+      </p>
+      <a class="btn btn--accent" href="/contactos">Contáctenos Ahora</a>
+    </div>
+  </section>
+</Layout>

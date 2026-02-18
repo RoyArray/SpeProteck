@@ -1,0 +1,137 @@
+---
+import Layout from "../layouts/Layout.astro";
+const gpsServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Rastreo GPS y Telemetría",
+  provider: {
+    "@type": "Organization",
+    name: "Proteck",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "Costa Rica",
+  },
+  description:
+    "Sistemas avanzados de rastreo satelital para flotas y vehículos particulares con monitoreo 24/7 y telemetría avanzada.",
+  offers: {
+    "@type": "Offer",
+    description: "Cotización personalizada según tamaño de flota",
+  },
+};
+---
+
+<Layout
+  title="Rastreo GPS y Telemetría | Proteck"
+  description="Soluciones avanzadas de rastreo satelital y telemetría en Costa Rica. Optimización de flotas, seguridad activa y monitoreo en tiempo real 24/7."
+  pageSchema={gpsServiceSchema}
+>
+  <!-- HERO -->
+  <section class="page-hero page-hero--service">
+    <div class="container page-hero__inner">
+      <h1 class="page-hero__title" data-animate="fade-up">GPS</h1>
+      <p class="page-hero__subtitle" data-animate="fade-up" data-delay="200">
+        Control total de tu flota, tranquilidad absoluta
+      </p>
+    </div>
+  </section>
+
+  <!-- BLOQUE BLANCO (ESPACIO COMO REFERENCIA) -->
+  <section class="hero-gap" aria-hidden="true"></section>
+
+  <!-- TEXTO (CAJA CENTRADA) -->
+  <section class="page-section">
+    <div class="container" data-animate="fade-up">
+      <div class="text-box">
+        <p>
+          <strong>PROTECK GPS</strong> ofrece <strong
+            >soluciones avanzadas de rastreo satelital</strong
+          > que proporcionan las herramientas necesarias para <strong
+            >reducir el uso no autorizado</strong
+          > de vehículos, <strong>optimizar rutas</strong>, <strong
+            >disminuir costos operativos</strong
+          > y gestionar una <strong>flota altamente productiva</strong>.
+          Nuestros dispositivos IoT de última generación brindan
+          <strong>visibilidad completa en tiempo real</strong> de todos sus activos
+          móviles, permitiendo tomar
+          <strong>decisiones informadas</strong> basadas en datos precisos.
+        </p>
+
+        <p>
+          Nuestros <strong>productos de seguimiento inteligente</strong> se adaptan
+          a <strong>requisitos personalizados</strong>
+          de rastreo para múltiples industrias y aplicaciones: <strong
+            >agricultura de precisión</strong
+          >, flotas de
+          <strong>alquiler de vehículos</strong>, <strong
+            >autobuses escolares</strong
+          > con seguridad estudiantil,
+          <strong>telemetría para seguros</strong>, maquinaria de <strong
+            >construcción y minería</strong
+          >, servicios de
+          <strong>entrega y última milla</strong>, flotas de <strong
+            >emergencia y rescate</strong
+          >, logística y
+          <strong>transporte de carga</strong>, motocicletas y vehículos
+          recreativos, flotas de servicios públicos, sistemas de movilidad
+          compartida (scooters y bicicletas eléctricas), protección de vehículos
+          de lujo, y
+          <strong>recuperación de vehículos robados</strong>.
+        </p>
+
+        <p>
+          Cada solución incluye <strong>acceso a plataforma web y móvil</strong> con
+          mapeo en tiempo real, historial de rutas detallado, <strong
+            >alertas personalizables</strong
+          > (exceso de velocidad, desvíos de ruta, uso fuera de horario), <strong
+            >geocercas virtuales</strong
+          >, <strong>reportes automáticos</strong> de rendimiento, mantenimiento predictivo
+          basado en kilometraje y horas de uso, monitoreo de hábitos de conducción
+          y análisis de consumo de combustible. Todo esto se traduce en <strong
+            >reducción de costos hasta un 30%</strong
+          >, mayor seguridad para conductores y carga, optimización de recursos
+          y un <strong>retorno de inversión</strong>
+          comprobado en menos de 6 meses.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS (3 COLUMNAS COMO REFERENCIA) -->
+  <section class="benefits-strip">
+    <div class="container">
+      <div class="benefits-3" data-animate="stagger">
+        <article class="benefit-item">
+          <div class="benefit-item__icon blue">📡</div>
+          <h3>Localización Precisa 24/7</h3>
+          <p>
+            Rastreo satelital en tiempo real con precisión de 2 metros,
+            actualizaciones cada 10 segundos, cobertura nacional e
+            internacional, y funcionamiento incluso en zonas remotas sin señal
+            celular.
+          </p>
+        </article>
+
+        <article class="benefit-item">
+          <div class="benefit-item__icon green">⛽</div>
+          <h3>Optimización y Ahorro</h3>
+          <p>
+            Reducción del 30% en combustible mediante rutas optimizadas, control
+            de ralentí excesivo, alertas de mantenimiento preventivo y reportes
+            detallados de productividad por vehículo y conductor.
+          </p>
+        </article>
+
+        <article class="benefit-item">
+          <div class="benefit-item__icon blue">🛡️</div>
+          <h3>Seguridad Activa Total</h3>
+          <p>
+            Botón de pánico para emergencias, corte de motor remoto, alertas de
+            uso no autorizado, geocercas virtuales, recuperación de vehículos
+            robados con tasa de éxito del 95%.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+</Layout>

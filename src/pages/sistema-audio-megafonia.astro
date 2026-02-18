@@ -1,0 +1,142 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const audioServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Sistemas de Audio IP y Megafonía",
+  provider: {
+    "@type": "Organization",
+    name: "Proteck",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "Costa Rica",
+  },
+  description:
+    "Soluciones de sonorización, intercomunicación y megafonía IP para comercios y espacios públicos.",
+  offers: {
+    "@type": "Offer",
+    description: "Sistemas de audio profesional IP",
+  },
+};
+---
+
+<Layout
+  title="Sistemas de Audio IP y Megafonía Comercial | Proteck"
+  description="Soluciones de sonorización, intercomunicación y megafonía IP para comercios y espacios públicos. Claridad excepcional e integración con sistemas de seguridad."
+  pageSchema={audioServiceSchema}
+>
+  <!-- HERO -->
+  <section class="page-hero page-hero--service">
+    <div class="container page-hero__inner">
+      <h1 class="page-hero__title" data-animate="fade-up">
+        Sistemas de Audio y Megafonía
+      </h1>
+      <p class="page-hero__subtitle" data-animate="fade-up" data-delay="200">
+        Tu mensaje, claro y poderoso en cada rincón
+      </p>
+    </div>
+  </section>
+
+  <!-- BLOQUE BLANCO -->
+  <section class="hero-gap" aria-hidden="true"></section>
+
+  <!-- TEXTO -->
+  <section class="page-section">
+    <div class="container" data-animate="fade-up">
+      <div class="text-box">
+        <p>
+          Ofrecemos la <strong>más amplia y completa gama de productos</strong>,
+          prestaciones y soluciones para
+          <strong>sistemas de sonorización</strong>, <strong
+            >intercomunicación</strong
+          > y <strong>megafonía</strong>
+          en instalaciones comerciales y públicas. Nuestra experiencia abarca desde
+          <strong>tiendas y supermercados</strong>
+          hasta bares, restaurantes, farmacias, agencias de viajes, gimnasios, centros
+          culturales y pequeños comercios, adaptándonos a las <strong
+            >necesidades específicas</strong
+          > de cada espacio y sector.
+        </p>
+
+        <p>
+          En un mundo <strong>cada vez más conectado</strong>, los usuarios
+          están descubriendo que las soluciones IP traen beneficios
+          extraordinarios que transforman la gestión del audio empresarial. Los
+          <strong>sistemas de audio y megafonía basados en red</strong> que comercializamos
+          (especialmente la línea Axis Communications) son <strong
+            >fáciles de instalar</strong
+          > y, al basarse en <strong>estándares abiertos</strong>, permiten una <strong
+            >integración perfecta</strong
+          > con otros sistemas existentes como videovigilancia, control de acceso
+          y gestión de edificios.
+        </p>
+
+        <p>
+          Nuestra cartera de audio profesional incluye <strong
+            >megáfonos de red independientes</strong
+          >, sistemas de
+          <strong>intercomunicación bidireccional</strong> y accesorios de audio especializados.
+          También ofrecemos
+          <strong>sistemas completos de audio de alta fidelidad</strong>,
+          ideales tanto para música ambiental como para
+          <strong>megafonía de emergencia</strong> y anuncios comerciales. Cada solución
+          está diseñada para ofrecer
+          <strong>claridad excepcional</strong>, cobertura uniforme y <strong
+            >control centralizado</strong
+          > desde cualquier dispositivo conectado a la red.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGEN GRANDE (como referencia) -->
+  <section class="audio-products__single">
+    <div class="container">
+      <img
+        src="/images/sistema-de-audio-y-megafonia.jpg"
+        alt="Equipos de audio y megafonía"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section class="benefits-strip">
+    <div class="container">
+      <div class="benefits-3" data-animate="stagger">
+        <article class="benefit-item">
+          <div class="benefit-item__icon blue">📡</div>
+          <h3>Audio IP de Alta Calidad</h3>
+          <p>
+            Sistemas basados en red con calidad de audio superior, zonificación
+            inteligente, programación automatizada y capacidad de transmitir
+            música, anuncios y alertas de emergencia desde cualquier punto.
+          </p>
+        </article>
+
+        <article class="benefit-item">
+          <div class="benefit-item__icon green">🔗</div>
+          <h3>Integración Total</h3>
+          <p>
+            Compatibilidad con sistemas existentes de seguridad y gestión,
+            control remoto vía web, integración con alarmas de incendio y
+            activación automática ante eventos.
+          </p>
+        </article>
+
+        <article class="benefit-item">
+          <div class="benefit-item__icon blue">📱</div>
+          <h3>Gestión Centralizada Simple</h3>
+          <p>
+            Control total desde una app: programación por horarios, anuncios por
+            zonas, ajuste de volumen remoto y monitoreo del estado del sistema
+            en tiempo real.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+</Layout>
