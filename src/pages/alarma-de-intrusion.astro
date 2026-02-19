@@ -20,12 +20,45 @@ const intrusionServiceSchema = {
     description: "Sistemas de seguridad perimetral",
   },
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "¿Cómo funciona una alarma de intrusión?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Un sistema de alarma de intrusión utiliza sensores (movimiento, apertura, rotura de vidrio) para detectar actividad no autorizada. Al activarse, el panel de control dispara una sirena local y envía una alerta inmediata a su celular o a una central de monitoreo.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué es la seguridad perimetral?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "La seguridad perimetral se enfoca en detectar al intruso antes de que ingrese a la edificación, utilizando barreras infrarrojas, cercas eléctricas o sensores de movimiento para exteriores, creando una primera línea de defensa efectiva.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Las alarmas funcionan si se corta la electricidad?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí, todos nuestros paneles de alarma profesional incluyen baterías de respaldo que mantienen el sistema operativo durante varias horas en caso de un corte de energía eléctrica.",
+      },
+    },
+  ],
+};
+
+const consolidatedSchema = [intrusionServiceSchema, faqSchema];
 ---
 
 <Layout
   title="Alarmas de Intrusión y Seguridad Perimetral | Proteck"
   description="Proteja su propiedad con sistemas de alarma de intrusión avanzados. Detección instantánea, respuesta automatizada y función disuasoria profesional."
-  pageSchema={intrusionServiceSchema}
+  pageSchema={consolidatedSchema}
 >
   <!-- HERO -->
   <section class="page-hero page-hero--service">
@@ -174,6 +207,50 @@ const intrusionServiceSchema = {
             decoding="async"
           />
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION (AEO focused) -->
+  <section class="section section--faq">
+    <div class="container container--narrow">
+      <h2 class="section-title" data-animate="fade-up">
+        Preguntas Frecuentes sobre Alarmas de Intrusión
+      </h2>
+      <div class="faq-grid" data-animate="stagger">
+        <details class="faq-item">
+          <summary>¿Cómo funciona la detección de intrusión?</summary>
+          <div class="faq-content">
+            <p>
+              El sistema utiliza sensores estratégicamente ubicados para
+              detectar movimientos sospechosos o aperturas no autorizadas,
+              activando alertas disuasorias y notificaciones móviles al
+              instante.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Qué importancia tiene la seguridad perimetral?</summary>
+          <div class="faq-content">
+            <p>
+              Es vital como primera línea de defensa, ya que permite detectar al
+              intruso en los alrededores de la propiedad, dándole tiempo valioso
+              para reaccionar antes de que se consume el ingreso.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿El sistema sigue operando sin electricidad?</summary>
+          <div class="faq-content">
+            <p>
+              Sí, nuestras alarmas cuentan con respaldo de batería de alta
+              duración, garantizando que su hogar o negocio permanezca protegido
+              incluso durante apagones prolongados.
+            </p>
+          </div>
+        </details>
       </div>
     </div>
   </section>

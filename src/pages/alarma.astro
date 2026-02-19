@@ -20,12 +20,45 @@ const fireServiceSchema = {
     description: "Sistemas de detección de incendio certificados",
   },
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "¿Por qué es importante cumplir con la normativa NFPA?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "La cumplimiento de las normas NFPA (National Fire Protection Association) garantiza que los sistemas de alarma contra incendio han sido diseñados e instalados bajo estándares internacionales de seguridad comprobados, lo cual es vital para la protección efectiva de vidas y para cumplir con los requisitos del Benemérito Cuerpo de Bomberos de Costa Rica.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuál es la diferencia entre un detector de humo y un sistema de alarma contra incendio?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Un detector de humo es un componente individual, mientras que un sistema de alarma contra incendio es una red integrada que incluye un panel central, múltiples tipos de sensores, estaciones manuales, sirenas y luces estroboscópicas que trabajan en conjunto para una evacuación organizada.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué mantenimiento requieren estos sistemas?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Para asegurar su correcto funcionamiento en una emergencia, los sistemas de incendio requieren inspecciones periódicas y mantenimiento preventivo trimestral o semestral, que incluyen pruebas de sensibilidad de sensores y verificación de baterías de respaldo.",
+      },
+    },
+  ],
+};
+
+const consolidatedSchema = [fireServiceSchema, faqSchema];
 ---
 
 <Layout
   title="Sistemas de Alarma contra Incendio Certificados | Proteck"
   description="Detección temprana de fuego y humo con tecnología inteligente. Cumplimiento de normas NFPA y monitoreo 24/7 para proteger vidas y propiedades."
-  pageSchema={fireServiceSchema}
+  pageSchema={consolidatedSchema}
 >
   <!-- HERO -->
   <section class="page-hero page-hero--service">
@@ -169,6 +202,49 @@ const fireServiceSchema = {
         <div class="brand-logo">
           <img src="/images/logo-edwards.jpg" alt="Edwards" />
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION (AEO focused) -->
+  <section class="section section--faq">
+    <div class="container container--narrow">
+      <h2 class="section-title" data-animate="fade-up">
+        Preguntas Frecuentes sobre Alarmas contra Incendio
+      </h2>
+      <div class="faq-grid" data-animate="stagger">
+        <details class="faq-item">
+          <summary>¿Por qué cumplir con la normativa NFPA?</summary>
+          <div class="faq-content">
+            <p>
+              Garantiza que su sistema cumple con los más altos estándares
+              internacionales de seguridad, asegurando una detección confiable y
+              facilitando trámites legales y de seguros.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Qué componentes integran un sistema completo?</summary>
+          <div class="faq-content">
+            <p>
+              Incluye un panel de control inteligente, detectores de humo y
+              calor, estaciones manuales, sirenas audibles y luces
+              estroboscópicas para una notificación total.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Cada cuánto se deben realizar pruebas al sistema?</summary>
+          <div class="faq-content">
+            <p>
+              Recomendamos inspecciones trimestrales según normativas locales
+              para asegurar que cada sensor y batería de respaldo funcione
+              perfectamente en el momento crítico.
+            </p>
+          </div>
+        </details>
       </div>
     </div>
   </section>

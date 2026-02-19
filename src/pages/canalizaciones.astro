@@ -20,12 +20,45 @@ const canalizationServiceSchema = {
     description: "Instalación de canalizaciones industriales",
   },
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "¿Por qué son importantes las canalizaciones en una instalación eléctrica?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Las canalizaciones protegen el cableado contra daños mecánicos, humedad, polvo e interferencias, asegurando una vida útil más larga de la infraestructura y facilitando el mantenimiento futuro.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué tipos de canalización ofrecen?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Ofrecemos una amplia variedad: desde tubería EMT y PVC para instalaciones estándar, hasta bandejas portacables tipo malla o escalera para entornos industriales y centros de datos.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cumplen sus instalaciones con el Código Eléctrico Nacional?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí, todos nuestros diseños e instalaciones de canalizaciones se realizan siguiendo estrictamente las normativas del Código Eléctrico Nacional vigente en Costa Rica para garantizar la máxima seguridad.",
+      },
+    },
+  ],
+};
+
+const consolidatedSchema = [canalizationServiceSchema, faqSchema];
 ---
 
 <Layout
   title="Canalizaciones Eléctricas y para Datos | Proteck"
   description="Sistemas de canalización especializados para proteger su infraestructura crítica. Bandejas portacables, tubería EMT y soluciones robustas para su empresa."
-  pageSchema={canalizationServiceSchema}
+  pageSchema={consolidatedSchema}
 >
   <!-- HERO -->
   <section class="page-hero page-hero--service">
@@ -141,3 +174,46 @@ const canalizationServiceSchema = {
     </div>
   </section>
 </Layout>
+
+<!-- FAQ SECTION (AEO focused) -->
+<section class="section section--faq">
+  <div class="container container--narrow">
+    <h2 class="section-title" data-animate="fade-up">
+      Preguntas Frecuentes sobre Canalizaciones
+    </h2>
+    <div class="faq-grid" data-animate="stagger">
+      <details class="faq-item">
+        <summary>¿Qué función principal cumplen las canalizaciones?</summary>
+        <div class="faq-content">
+          <p>
+            Su objetivo primordial es resguardar la integridad física del
+            cableado, organizando las rutas de cables para evitar daños y
+            facilitar futuras expansiones o reparaciones.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Cuándo es mejor usar bandejas en lugar de tubería?</summary>
+        <div class="faq-content">
+          <p>
+            Las bandejas son ideales para volúmenes altos de cables y entornos
+            donde se requiere fácil acceso para mantenimiento frecuente o
+            adición de nuevos circuitos.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Cómo aseguran la calidad de la instalación?</summary>
+        <div class="faq-content">
+          <p>
+            Trabajamos bajo los estándares del Código Eléctrico Nacional,
+            utilizando materiales de alta resistencia y técnicas de sujeción
+            profesionales que garantizan una estructura sólida.
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>

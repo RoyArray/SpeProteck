@@ -18,22 +18,42 @@ const {
 const siteName = "Proteck";
 
 // Esquema de Organización Base
+// Esquema de Organización/Negocio Local para AEO
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Proteck",
-  "alternateName": "Sistemas de Protección Electrónica Proteck",
-  "url": "https://speproteck.com", // Cambiar por el dominio real si es diferente
-  "logo": new URL("/images/logo-proteck.png", Astro.url).href,
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+506-2248-1071",
-    "contactType": "customer service",
-    "areaServed": "CR",
-    "availableLanguage": "Spanish"
+  "@type": "ProfessionalService",
+  "name": "Proteck - Sistemas de Protección Electrónica",
+  "image": new URL("/images/logo-proteck.png", Astro.url).href,
+  "url": "https://speproteck.com",
+  "telephone": "+506-2248-1071",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Paseo Colón", // Ajustar si hay dirección más específica
+    "addressLocality": "San José",
+    "addressRegion": "SJ",
+    "postalCode": "10101",
+    "addressCountry": "CR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 9.9358,
+    "longitude": -84.0912
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "09:00",
+    "closes": "18:00"
   },
   "sameAs": [
-    "https://www.facebook.com/proteck", // Actualizar URLs reales si existen
+    "https://www.facebook.com/proteck",
     "https://www.instagram.com/proteck"
   ]
 };

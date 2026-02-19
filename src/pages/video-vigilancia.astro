@@ -34,12 +34,45 @@ const cctvServiceSchema = {
     description: "Sistemas personalizados de cámaras IP",
   },
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "¿Cuál es la diferencia entre CCTV analógico y Video Vigilancia IP?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "La Video Vigilancia IP ofrece una calidad de imagen muy superior (HD/4K), es más escalable y permite el uso de analítica inteligente integrada, a diferencia de los sistemas analógicos tradicionales que tienen limitaciones de resolución y funcionalidad.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué es la analítica de video inteligente?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Es una tecnología que permite a las cámaras reconocer automáticamente eventos específicos, como cruce de línea, detección de rostros o conteo de personas, enviando alertas en tiempo real sin necesidad de monitoreo humano constante.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Puedo ver mis cámaras desde mi celular?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí, todos nuestros sistemas de Video Vigilancia IP incluyen acceso remoto a través de aplicaciones móviles seguras, permitiéndole monitorear sus instalaciones en tiempo real desde cualquier parte del mundo.",
+      },
+    },
+  ],
+};
+
+const consolidatedSchema = [cctvServiceSchema, faqSchema];
 ---
 
 <Layout
   title="Video Vigilancia IP y Body Cams | Proteck"
   description="Soluciones de video vigilancia IP con inteligencia integrada y analítica avanzada. Distribuidores de marcas líderes: Hikvision, Axis, Honeywell y más."
-  pageSchema={cctvServiceSchema}
+  pageSchema={consolidatedSchema}
 >
   <!-- HERO (igual que las otras páginas) -->
   <section class="page-hero page-hero--service">
@@ -303,6 +336,49 @@ const cctvServiceSchema = {
             loading="lazy"
           />
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION (AEO focused) -->
+  <section class="section section--faq">
+    <div class="container container--narrow">
+      <h2 class="section-title" data-animate="fade-up">
+        Preguntas Frecuentes sobre Video Vigilancia
+      </h2>
+      <div class="faq-grid" data-animate="stagger">
+        <details class="faq-item">
+          <summary>¿Cuál es la diferencia entre CCTV analógico e IP?</summary>
+          <div class="faq-content">
+            <p>
+              Los sistemas IP ofrecen una resolución mucho más alta, mejor
+              escalabilidad y analítica inteligente, lo que permite una
+              seguridad proactiva en lugar de solo reactiva.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Qué beneficios ofrece la analítica de video?</summary>
+          <div class="faq-content">
+            <p>
+              Permite automatizar la vigilancia mediante la detección de
+              intrusos, reconocimiento de placas y conteo de personas, generando
+              alertas instantáneas ante eventos sospechosos.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Es posible el monitoreo remoto?</summary>
+          <div class="faq-content">
+            <p>
+              Sí, nuestras soluciones permiten el acceso seguro desde
+              smartphones y tablets, brindándole tranquilidad y control total de
+              su negocio sin importar dónde se encuentre.
+            </p>
+          </div>
+        </details>
       </div>
     </div>
   </section>

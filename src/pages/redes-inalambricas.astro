@@ -20,12 +20,45 @@ const wirelessServiceSchema = {
     description: "Implementaciones Wi-Fi empresariales",
   },
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "¿Qué beneficios ofrece Wi-Fi 6 sobre versiones anteriores?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Wi-Fi 6 ofrece mayor capacidad para conectar muchos dispositivos simultáneamente sin perder velocidad, mejor eficiencia energética y una latencia significativamente menor, lo cual es ideal para oficinas modernas.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Son seguras las redes inalámbricas para mi empresa?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí, utilizando el estándar de seguridad WPA3 empresarial y una correcta segmentación de redes (VLANs), las redes inalámbricas actuales ofrecen un nivel de protección extremadamente alto para sus datos corporativos.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cómo eliminan el problema de las 'zonas muertas'?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Realizamos un estudio de cobertura previo para ubicar estratégicamente los puntos de acceso, creando una red tipo 'mesh' o controlada que garantiza una conexión fluida y constante en toda el área requerida.",
+      },
+    },
+  ],
+};
+
+const consolidatedSchema = [wirelessServiceSchema, faqSchema];
 ---
 
 <Layout
   title="Redes Inalámbricas Empresariales Wi-Fi 6/7 | Proteck"
   description="Conectividad inalámbrica robusta, segura y de alto rendimiento para empresas. Implementaciones híbridas con Wi-Fi 6/7 y seguridad WPA3 empresarial."
-  pageSchema={wirelessServiceSchema}
+  pageSchema={consolidatedSchema}
 >
   <!-- HERO -->
   <section class="page-hero page-hero--service">
@@ -174,3 +207,46 @@ const wirelessServiceSchema = {
     </div>
   </section>
 </Layout>
+
+<!-- FAQ SECTION (AEO focused) -->
+<section class="section section--faq">
+  <div class="container container--narrow">
+    <h2 class="section-title" data-animate="fade-up">
+      Preguntas Frecuentes sobre Redes Inalámbricas
+    </h2>
+    <div class="faq-grid" data-animate="stagger">
+      <details class="faq-item">
+        <summary>¿Por qué mi oficina necesita Wi-Fi 6 o Wi-Fi 7?</summary>
+        <div class="faq-content">
+          <p>
+            Estas tecnologías permiten manejar una alta densidad de dispositivos
+            (celulares, laptops, IoT) sin degradar la velocidad, asegurando una
+            productividad constante para todo su equipo.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Qué tan compleja es la seguridad inalámbrica?</summary>
+        <div class="faq-content">
+          <p>
+            Implementamos protocolos WPA3 y autenticación robusta que protegen
+            su red contra accesos no autorizados, manteniendo la información
+            confidencial de su empresa totalmente segura.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Cómo aseguran una cobertura total?</summary>
+        <div class="faq-content">
+          <p>
+            Mediante el uso de puntos de acceso profesionales con gestión
+            inteligente, garantizamos que sus usuarios puedan desplazarse por
+            todo el edificio sin perder la conexión en ningún momento.
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>

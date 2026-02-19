@@ -20,12 +20,45 @@ const accessServiceSchema = {
     description: "Soluciones de control de acceso corporativo",
   },
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "¿Qué es un sistema de control de acceso?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Un sistema de control de acceso es una solución de seguridad que permite gestionar y restringir la entrada de personas autorizadas a áreas específicas de una empresa o edificio, utilizando tecnologías como biometría, tarjetas de proximidad o reconocimiento facial.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuáles son las ventajas del control de acceso biométrico?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "La principal ventaja es la seguridad intransferible. A diferencia de las tarjetas o códigos, los rasgos biométricos (huella, rostro) no se pueden perder, olvidar ni prestar, garantizando que quien ingresa es realmente la persona autorizada.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Se puede integrar el control de acceso con otros sistemas de seguridad?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí, nuestros sistemas se integran perfectamente con CCTV y alarmas de intrusión, permitiendo una gestión unificada de la seguridad y la generación de eventos automáticos, como grabar video cuando alguien intenta forzar una puerta.",
+      },
+    },
+  ],
+};
+
+const consolidatedSchema = [accessServiceSchema, faqSchema];
 ---
 
 <Layout
   title="Sistemas de Control de Acceso Biométrico | Proteck"
   description="Gestione el acceso a sus instalaciones con biometría, tarjetas y reconocimiento facial. Pasillos de seguridad, torniquetes y gestión centralizada."
-  pageSchema={accessServiceSchema}
+  pageSchema={consolidatedSchema}
 >
   <!-- HERO (igual que las otras páginas) -->
   <section class="page-hero page-hero--service">
@@ -196,6 +229,52 @@ const accessServiceSchema = {
             decoding="async"
           />
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION (AEO focused) -->
+  <section class="section section--faq">
+    <div class="container container--narrow">
+      <h2 class="section-title" data-animate="fade-up">
+        Preguntas Frecuentes sobre Control de Acceso
+      </h2>
+      <div class="faq-grid" data-animate="stagger">
+        <details class="faq-item">
+          <summary>¿Qué es un sistema de control de acceso?</summary>
+          <div class="faq-content">
+            <p>
+              Es una solución de seguridad avanzada que permite gestionar quién
+              está autorizado a ingresar a sus instalaciones. Utiliza políticas
+              que verifican la identidad y garantizan niveles de autorización
+              adecuados.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary
+            >¿Cuáles son las ventajas del control de acceso biométrico?</summary
+          >
+          <div class="faq-content">
+            <p>
+              Ofrece seguridad máxima al ser intransferible. El uso de huella
+              dactilar o reconocimiento facial elimina el riesgo de tarjetas
+              perdidas o códigos compartidos, asegurando un control absoluto.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Se puede integrar con otros sistemas?</summary>
+          <div class="faq-content">
+            <p>
+              Totalmente. Nuestras soluciones se integran con sistemas de video
+              vigilancia y alarmas contra incendio, permitiendo, por ejemplo, la
+              liberación automática de puertas en caso de emergencia.
+            </p>
+          </div>
+        </details>
       </div>
     </div>
   </section>

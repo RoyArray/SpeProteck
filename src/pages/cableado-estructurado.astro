@@ -20,12 +20,45 @@ const cablingServiceSchema = {
     description: "Infraestructura de red para empresas",
   },
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "¿Por qué es mejor el cableado estructurado que una red convencional?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "El cableado estructurado sigue estándares internacionales que garantizan el rendimiento, facilitan la administración de la red y permiten el crecimiento futuro, reduciendo drásticamente las fallas de conexión y los cuellos de botella.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué diferencia hay entre Cat6 y Cat6A?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Cat6 soporta velocidades de hasta 1 Gbps a 100 metros, mientras que Cat6A está diseñado para soportar 10 Gbps a la misma distancia, ofreciendo mayor protección contra interferencias y preparándolo para demandas tecnológicas futuras.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué significa que un cableado esté certificado?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Significa que cada punto de red ha sido probado con equipos de medición especializados para verificar que cumple con los parámetros de velocidad, atenuación y ruido exigidos por las normas internacionales, garantizando su fiabilidad.",
+      },
+    },
+  ],
+};
+
+const consolidatedSchema = [cablingServiceSchema, faqSchema];
 ---
 
 <Layout
   title="Cableado Estructurado y Redes LAN | Proteck"
   description="Diseño e instalación de cableado estructurado certificado (Cat6, Cat6A). Infraestructura de red confiable con marcas líderes: Panduit, Belden y CommScope."
-  pageSchema={cablingServiceSchema}
+  pageSchema={consolidatedSchema}
 >
   <!-- HERO -->
   <section class="page-hero page-hero--service">
@@ -208,6 +241,54 @@ const cablingServiceSchema = {
             decoding="async"
           />
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION (AEO focused) -->
+  <section class="section section--faq">
+    <div class="container container--narrow">
+      <h2 class="section-title" data-animate="fade-up">
+        Preguntas Frecuentes sobre Cableado Estructurado
+      </h2>
+      <div class="faq-grid" data-animate="stagger">
+        <details class="faq-item">
+          <summary
+            >¿Qué beneficios reales ofrece el cableado estructurado?</summary
+          >
+          <div class="faq-content">
+            <p>
+              Proporciona una infraestructura robusta que minimiza el tiempo de
+              inactividad, simplifica el mantenimiento y asegura que su red sea
+              escalable para nuevas tecnologías de voz y datos.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Cuándo debería elegir Cat6A sobre Cat6?</summary>
+          <div class="faq-content">
+            <p>
+              Cat6A es recomendable para centros de datos, hospitales o empresas
+              que necesiten mover grandes volúmenes de información a 10 Gbps o
+              que operen en entornos con alta interferencia electromagnética.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary
+            >¿Por qué es vital la certificación de los puntos de red?</summary
+          >
+          <div class="faq-content">
+            <p>
+              La certificación es el único método para asegurar que la
+              instalación fue realizada correctamente y que usted recibirá el
+              rendimiento por el cual pagó, respaldado por un reporte técnico
+              detallado.
+            </p>
+          </div>
+        </details>
       </div>
     </div>
   </section>

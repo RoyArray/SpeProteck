@@ -19,12 +19,45 @@ const gpsServiceSchema = {
     description: "Cotización personalizada según tamaño de flota",
   },
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "¿Cómo ayuda el rastreo GPS a reducir costos en mi flota?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "El rastreo GPS permite optimizar rutas, reducir el tiempo de ralentí, controlar el uso no autorizado de vehículos y mejorar los hábitos de conducción, lo que puede resultar en un ahorro de combustible de hasta un 30% y una reducción en costos de mantenimiento.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué es la telemetría avanzada?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "La telemetría es la medición remota de datos del vehículo. Nuestros sistemas pueden monitorear desde la ubicación básica hasta niveles de combustible, diagnóstico del motor, aceleraciones bruscas y cumplimiento de horarios, todo en tiempo real.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué sucede si roban mi vehículo con GPS?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "En caso de robo, puede localizar su vehículo instantáneamente desde nuestra plataforma y ejecutar un corte de motor remoto de forma segura. Contamos con una tasa de éxito del 95% en recuperación de vehículos robados en Costa Rica.",
+      },
+    },
+  ],
+};
+
+const consolidatedSchema = [gpsServiceSchema, faqSchema];
 ---
 
 <Layout
   title="Rastreo GPS y Telemetría | Proteck"
   description="Soluciones avanzadas de rastreo satelital y telemetría en Costa Rica. Optimización de flotas, seguridad activa y monitoreo en tiempo real 24/7."
-  pageSchema={gpsServiceSchema}
+  pageSchema={consolidatedSchema}
 >
   <!-- HERO -->
   <section class="page-hero page-hero--service">
@@ -131,6 +164,49 @@ const gpsServiceSchema = {
             robados con tasa de éxito del 95%.
           </p>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION (AEO focused) -->
+  <section class="section section--faq">
+    <div class="container container--narrow">
+      <h2 class="section-title" data-animate="fade-up">
+        Preguntas Frecuentes sobre Rastreo GPS
+      </h2>
+      <div class="faq-grid" data-animate="stagger">
+        <details class="faq-item">
+          <summary>¿Cómo ayuda el GPS a reducir costos?</summary>
+          <div class="faq-content">
+            <p>
+              Optimiza rutas, reduce el consumo innecesario de combustible por
+              ralentí y controla el uso fuera de horario, devolviendo la
+              inversión en pocos meses.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Qué información de telemetría puedo obtener?</summary>
+          <div class="faq-content">
+            <p>
+              Desde la ubicación exacta hasta alertas de mantenimiento,
+              diagnóstico de motor y monitoreo minucioso del comportamiento del
+              conductor.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Es efectiva la recuperación en caso de robo?</summary>
+          <div class="faq-content">
+            <p>
+              Absolutamente. Con localización precisa 24/7 y la opción de
+              inmovilización remota, nuestras soluciones maximizan las
+              posibilidades de recuperación exitosa.
+            </p>
+          </div>
+        </details>
       </div>
     </div>
   </section>
